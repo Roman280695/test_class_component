@@ -2,16 +2,40 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+
+// создание jsx - элемента через 
+// если несколько элемнтов то добавляем в круглые скобки
+
+// const elem = <h2>Hello world</h2>
+
+
+
+const elem = (
+  <div>
+    <h2>Hello</h2>
+    <input type="text"/>
+    <button/>
+  </div>
+);
+
+
+// создание jsx - при помощи обычных инструментов js
+
+// необходимо передать три аргумента
+
+// 1 - название нашего элемента в верстке - h2
+// 2 - назввание классов, если их нет то должны писать - null
+// 3 - содержимое нашего тега
+
+// в стандаотной ситуации никто не пользуется таким синтаксисом 
+
+// const elem =  React.createElement('h2', {className: 'greetings'}, 'Hello world');
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <App/>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ 
